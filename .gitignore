@@ -2,8 +2,8 @@
 .idea
 
 # Hugo default output directory
-/public
-!/public/.gitkeep
+public/*
+!public/.gitkeep
 
 ## OS Files
 # Windows
