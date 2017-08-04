@@ -3,7 +3,7 @@
 
 # Hugo default output directory
 public/*
-!public/.gitkeep
+!public/index.html
 
 ## OS Files
 # Windows

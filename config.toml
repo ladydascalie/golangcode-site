@@ -1,7 +1,7 @@
 baseurl = "https://golangcode.com/"
 languageCode = "en-GB"
 title = "GolangCode"
-theme="hugo-theme-cactus-plus"
+theme="site-theme"
 
 [params]
 	name = "Golang Code"
