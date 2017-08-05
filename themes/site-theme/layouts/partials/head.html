@@ -6,9 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
         {{ .Hugo.Generator }}
-        <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+        <title>{{ if .IsHome }}{{ .Title }} - {{ .Site.Params.bio }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
 
-        <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="/xfavicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="/xfavicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/xfavicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="/xfavicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/xfavicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/xfavicon-16.png">
+        <link rel="apple-touch-icon" href="/xfavicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/xfavicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/xfavicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/xfavicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/xfavicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/xfavicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/xfavicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/xfavicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/xfavicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/favicon-144.png">
+        <meta name="msapplication-config" content="/browserconfig.xml">
         <link rel="canonical" href="{{ .Permalink }}" />
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700|Merriweather:400,700"> 
