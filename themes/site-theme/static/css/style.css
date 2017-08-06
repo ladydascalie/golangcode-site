@@ -186,7 +186,7 @@ div.pre-nav-header {
 div.pre-nav-header a {
     display: block;
     color: #777;
-    padding: 20px;
+    padding: 20px 10px 10px 20px;
 }
 
 nav.main-nav {
@@ -233,7 +233,7 @@ nav.main-nav a.cta {
   }
   .main-nav-home-link { display: none; }
 }
-@media (max-width: 324px) {
+@media (max-width: 424px) {
     nav.main-nav a.cta {
       display: none;
     }
@@ -947,4 +947,30 @@ a.symbol:hover {
 
 .page-tags .tags:hover a {
     color: #3a78d7;
+}
+
+
+/* Search Box */
+
+#cse-search-box input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+#cse-search-box input[type="text"]:focus {
+    box-shadow: 0 0 7px #5badf0;
+}
+#cse-search-box input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+@media (min-width: 700px) {
+    #cse-search-box input[type="submit"] {
+        width: 400px;
+        margin: 0 auto;
+    }
 }

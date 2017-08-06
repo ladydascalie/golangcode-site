@@ -32,6 +32,7 @@
             {{ end }}
             <section id="post-body">
                 {{ .Content }}
+                {{ if eq .Title "Search" }} {{ partial "search.html" }} {{ end }}
             </section>
         </article>
 

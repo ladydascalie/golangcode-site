@@ -2,13 +2,15 @@
     {{ range where .Paginator.Pages "Params.hidden" "ne" "true" }}
     {{ $url := replace .Permalink .Site.BaseURL "" }}
         {{ if ne $url "about/" }}
-            <li>
-                <!-- <a href='{{ .Permalink }}'><aside class="dates">{{ .Date.Format "Jan 2" }}</aside></a> -->
-                <a href='{{ .Permalink }}'>
-                    {{ .Title }} <h2>{{ .Description | markdownify }}</h2>
-                </a>
-                <p>{{ .Summary }}</p>
-            </li>
+            {{ if ne $url "search/" }}
+                <li>
+                    <!-- <a href='{{ .Permalink }}'><aside class="dates">{{ .Date.Format "Jan 2" }}</aside></a> -->
+                    <a href='{{ .Permalink }}'>
+                        {{ .Title }} <h2>{{ .Description | markdownify }}</h2>
+                    </a>
+                    <p>{{ .Summary }}</p>
+                </li>
+            {{ end }}
         {{ end }}
     {{ end }}
 </ul>
