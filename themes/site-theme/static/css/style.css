@@ -135,6 +135,12 @@ h2 {
     color: #bbb;
 }
 
+code {
+    font-family: "Fira Mono", monospace;
+    font-size: .9em;
+    color: #222;
+}
+
 .profile #wrapper {
     padding: 60px 40px 0px;
     max-width: 600px;
