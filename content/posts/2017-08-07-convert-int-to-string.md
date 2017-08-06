@@ -2,7 +2,7 @@
 title: Converting an Int to a String
 author: Edd Turtle
 type: post
-<!-- draft: true -->
+draft: true
 date: 2017-08-07T17:00:00+00:00
 url: /converting-and-int-to-string/
 categories:
