@@ -25,7 +25,8 @@ theme="site-theme"
 	enableGithubIssuesTips = false
 
 	# Enable googleAnalytics
-	enableGoogleAnalytics = false
+	enableGoogleAnalytics = true
+	GoogleAnalytics = 'UA-65854395-1'
 
 	# Add custom assets with their paths relative to the static folder
 	customCSS = []

@@ -1,105 +1,105 @@
 <!DOCTYPE html>
 <html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-        {{ .Hugo.Generator }}
-        <title>{{ if .IsHome }}{{ .Title }} - {{ .Site.Params.bio }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ .Hugo.Generator }}
+    <title>{{ if .IsHome }}{{ .Title }} - {{ .Site.Params.bio }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
 
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-        <link rel="icon" type="image/png" sizes="196x196" href="/xfavicon-192.png">
-        <link rel="icon" type="image/png" sizes="160x160" href="/xfavicon-160.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/xfavicon-96.png">
-        <link rel="icon" type="image/png" sizes="64x64" href="/xfavicon-64.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/xfavicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/xfavicon-16.png">
-        <link rel="apple-touch-icon" href="/xfavicon-57.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/xfavicon-114.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/xfavicon-72.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/xfavicon-144.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/xfavicon-60.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/xfavicon-120.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/xfavicon-76.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/xfavicon-152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/xfavicon-180.png">
-        <meta name="msapplication-TileColor" content="#FFFFFF">
-        <meta name="msapplication-TileImage" content="/favicon-144.png">
-        <meta name="msapplication-config" content="/browserconfig.xml">
-        <link rel="canonical" href="{{ .Permalink }}" />
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700|Merriweather:400,700"> 
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/xfavicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/xfavicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/xfavicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/xfavicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/xfavicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/xfavicon-16.png">
+    <link rel="apple-touch-icon" href="/xfavicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/xfavicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/xfavicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/xfavicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/xfavicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/xfavicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/xfavicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/xfavicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/xfavicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="canonical" href="{{ .Permalink }}" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700|Merriweather:400,700"> 
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css">
 
-        {{ if .Site.Params.enableRSS }}
-        <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-        {{ end }}
+    {{ if .Site.Params.enableRSS }}
+    <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
-        <meta name="twitter:title" content="{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.Tagline }}{{ else }} - {{ .Site.Title }}{{ end }}" />
-        <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
-        <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+    <meta name="twitter:title" content="{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.Tagline }}{{ else }} - {{ .Site.Title }}{{ end }}" />
+    <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
+    <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
 
-        <!-- OG data -->
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-        <meta content="{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.Tagline }}{{ else }} - {{ .Site.Title }}{{ end }}" property="og:title">
-        <meta content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" property="og:description">
-        <meta property="og:url" content="{{ .Permalink }}" />
-        <meta property="og:site_name" content="{{ .Site.Title }}" />
-        {{ range .Params.categories }}<meta property="article:section" content="{{ . }}" />{{ end }}
-        {{ if isset .Params "date" }}<meta property="article:published_time" content="{{ time .Date }}" />{{ end }}
-        
-        <!-- JSON-LD -->
-        {{ if .IsHome }}
+    <!-- OG data -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+    <meta content="{{ .Title }}{{ if .IsHome }} - {{ .Site.Params.Tagline }}{{ else }} - {{ .Site.Title }}{{ end }}" property="og:title">
+    <meta content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" property="og:description">
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    {{ range .Params.categories }}<meta property="article:section" content="{{ . }}" />{{ end }}
+    {{ if isset .Params "date" }}<meta property="article:published_time" content="{{ time .Date }}" />{{ end }}
+    
+    <!-- JSON-LD -->
+    {{ if .IsHome }}
+    <script type="application/ld+json">
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "{{ .Permalink }}", 
+      "name": "{{ .Site.Title }}",
+       "author": {
+          "@type": "Person",
+          "name": "{{ .Site.Params.author }}"
+        },
+      "description": "{{ .Site.Params.description }}",
+    }
+    </script>
+    {{ end }}{{ if .IsPage }}
         <script type="application/ld+json">
+        {{ if eq .Section "post" }}
+        { 
+            "@context": "http://schema.org", 
+            "@type": "BlogPosting",
+            "headline": "{{ .Title }}",
+            "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",  
+            "url": "{{ .Permalink }}",
+            "datePublished": "{{ time .Date }}",
+            "description": "{{ .Description }}",
+            "author": {
+                "@type": "Person",
+                "name": "{{ .Site.Params.author }}"
+            }
+         }
+        {{ else }}
         { 
           "@context": "http://schema.org", 
           "@type": "WebSite", 
           "url": "{{ .Permalink }}", 
-          "name": "{{ .Site.Title }}",
+          "name": "{{ .Title }}",
            "author": {
               "@type": "Person",
               "name": "{{ .Site.Params.author }}"
             },
           "description": "{{ .Site.Params.description }}",
         }
-        </script>
-        {{ end }}{{ if .IsPage }}
-            <script type="application/ld+json">
-            {{ if eq .Section "post" }}
-            { 
-                "@context": "http://schema.org", 
-                "@type": "BlogPosting",
-                "headline": "{{ .Title }}",
-                "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",  
-                "url": "{{ .Permalink }}",
-                "datePublished": "{{ time .Date }}",
-                "description": "{{ .Description }}",
-                "author": {
-                    "@type": "Person",
-                    "name": "{{ .Site.Params.author }}"
-                }
-             }
-            {{ else }}
-            { 
-              "@context": "http://schema.org", 
-              "@type": "WebSite", 
-              "url": "{{ .Permalink }}", 
-              "name": "{{ .Title }}",
-               "author": {
-                  "@type": "Person",
-                  "name": "{{ .Site.Params.author }}"
-                },
-              "description": "{{ .Site.Params.description }}",
-            }
-            {{ end }}
-            </script>
         {{ end }}
-    </head>
+        </script>
+    {{ end }}
+</head>
