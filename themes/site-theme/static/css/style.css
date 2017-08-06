@@ -155,9 +155,9 @@ code {
 
 .profile #avatar {
     display: inline-block;
-    width: 160px;
-    /*height: 80px;
-    border-radius: 50%;*/
+    /*width: 160px;*/
+    /*height: 80px;*/
+    /*border-radius: 50%;*/
     margin-bottom: 20px;
 }
 
@@ -476,7 +476,7 @@ thead th, th {
 }
 
 img {
-    width: 100%;
+    /*width: 100%;*/
     max-width: 100%;
     border-radius: 3px;
 }
