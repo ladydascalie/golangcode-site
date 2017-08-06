@@ -141,6 +141,19 @@ code {
     color: #222;
 }
 
+pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+    background: #2B2B2D;
+    color: #CDD3D8;
+    font-family: "Fira Mono", monospace;
+    font-size: .8rem;
+    border: 1px solid #1C1C1E;
+    border-left-width: 6px;
+    border-radius: 2px;
+}
+
 .profile #wrapper {
     padding: 60px 40px 0px;
     max-width: 600px;
