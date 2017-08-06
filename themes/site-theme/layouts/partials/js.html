@@ -1,4 +1,8 @@
-<script src="{{ .Site.BaseURL }}js/jquery-2.2.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script>
+   window.jQuery || document.write('<script src="{{ .Site.BaseURL }}js/jquery-3.2.1.min.js"><\/script>');
+</script>
+
 <script src="{{ .Site.BaseURL }}js/main.js"></script>
 
 <script src="{{ .Site.BaseURL }}js/highlight.min.js"></script>
