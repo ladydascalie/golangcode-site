@@ -16,13 +16,12 @@ tags:
   - os
   - path
   - separtor
-  - string
   - windows
 
 ---
-Unlike with URLs which have a standardised format (they use forward-slashes to separate), file paths will differ between operating systems. This is mainly a historic issue, as it&#8217;s almost inconceivable to change them at this stage. This means Windows will use back-slashes and *nix systems use forward slashes.
+Unlike with URLs which have a standardised format (they use forward-slashes to separate folders), file path separators will differ between operating systems. This is mainly a historic issue, as it's almost inconceivable to change them at this stage. This means Windows uses back-slashes and *nix systems use forward slashes.
 
-This is a pain however when writing cross platform software because if you know a file exists in a folder, and want to get it&#8217;s contents, you will have to use it&#8217;s folder name, a slash and the file name. We can tackle this problem in a number of ways. Here are two quick ones:
+This is a pain however when writing cross platform software because if you know a file exists in a folder, and want to get it's contents, you will have to use it's folder name, a slash separator and the file name. We can tackle this problem in a number of ways. Here are two quick ones:
 
 ```go
 package main

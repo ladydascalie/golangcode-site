@@ -2,39 +2,32 @@
 title: Converting an Int to a String
 author: Edd Turtle
 type: post
-date: 2017-08-06T14:00:00+00:00
-url: /get-the-http-response-status-code/
+<!-- draft: true -->
+date: 2017-08-07T17:00:00+00:00
+url: /converting-and-int-to-string/
 categories:
   - Uncategorized
 tags:
-  - net
-  - http
-  - response
-  - status
-  - code
-  - error handling
+  - strconv
+  - converting
+  - int
+  - string
+  - fmt
 ---
 
-When making http requests with go it is almost always necessary to check the status code of the response back. Generally if the status code is between 200 and 300 you should receive a successful response. But anything but, we need to handle.
+This is a short example on how to convert an integer number into a string. This is a common use case when printing to screen or working with the number as if it was a string. 
 
 ```go
 package main
 
 import (
     "fmt"
-    "log"
     "strconv"
 )
 
 func main() {
-
-    fmt.Println("x" + strconv.Itoa(resp.StatusCode))
-
-    if resp.StatusCode > 200 || resp.StatusCode <= 299 {
-        fmt.Println("HTTP Status OK!")
-    }
+    anInt := 1234
+    fmt.Println("Number: " + strconv.Itoa(anInt))
+    // Will print Number: 1234
 }
-
 ```
-
-StatusCode will be an integer, so we convert it with `strconv` to a string before print to screen.

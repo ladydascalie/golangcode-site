@@ -4,19 +4,21 @@ author: Edd Turtle
 type: post
 date: 2016-03-31T17:48:21+00:00
 url: /fizz-buzz-test-in-go/
-rop_post_url_twitter:
-  - 'https://golangcode.com/fizz-buzz-test-in-go/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost'
 categories:
   - Uncategorized
 tags:
-  - buzz
-  - divide
   - fizz
-  - modulus
+  - buzz
   - test
+  - divide
+  - modulus
+  - interview
+  - loop
 
 ---
-A simple program, often used in interviews to show people who can&#8217;t code. Prints the numbers from 1 to 100, except if the number is divisible by 3 print fizz or if the number is divisible by 5 print buzz.
+The [fizzbuzz](http://wiki.c2.com/?FizzBuzzTest) test is a simple program, often used in interviews to identify people who stuggle to code. 
+
+The programe should prints the numbers from 1 to 100, except if the number is divisible by 3 then print 'fizz', if the number is divisible by 5 print 'buzz' or if the number if divisible by both then print 'fizzbuzz'.
 
 ```go
 package main
@@ -24,15 +26,24 @@ package main
 import "fmt"
 
 func main() {
-    for i := 1; i &lt;= 100; i++ {
+    for i := 1; i <= 100; i++ {
 
-        if i % 3 == 0 {
-            fmt.Println("fizz")
-        } else if i % 5 == 0 {
-            fmt.Println("buzz")
-        } else {
-            fmt.Printf("%d\n", i)
+        if i%3 == 0 {
+            // Multiple of 3
+            fmt.Printf("fizz")
         }
+        if i%5 == 0 {
+            // Multiple of 5
+            fmt.Printf("buzz")
+        }
+
+        if i%3 != 0 && i%5 != 0 {
+            // Neither, so print the number itself
+            fmt.Printf("%d", i)
+        }
+
+        // A trailing new line (so both fizz + buzz can be printed on the same line)
+        fmt.Printf("\n")
 
     }
 }
