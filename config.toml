@@ -62,6 +62,7 @@ theme="site-theme"
 
 # Add additional social link entries underneath
 [social]
-	facebook-square = "your_facebook_link"
+	rss-square = "/index.xml"
+	# facebook-square = "/index.xml"
 	twitter-square = "https://twitter.com/golangcode"
 	github-square = "https://github.com/eddturtle/golangcode-site"
