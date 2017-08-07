@@ -5,7 +5,7 @@ theme="site-theme"
 
 [params]
 	name = "Golang Code"
-	description = "Blog Description"
+	description = "A Library of Go Snippets"
 	bio = "A Library of Go Snippets"
 	author = "Edd Turtle"
 	# Enter optionally your twitter account
