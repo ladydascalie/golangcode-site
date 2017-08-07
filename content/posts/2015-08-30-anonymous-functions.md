@@ -1,11 +1,9 @@
 ---
-title: Anonymous Functions
+title: Anonymous Functions (aka Closures)
 author: Edd Turtle
 type: post
 date: 2015-08-30T10:05:07+00:00
 url: /anonymous-functions/
-rop_post_url_twitter:
-  - 'https://golangcode.com/anonymous-functions/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost'
 categories:
   - Uncategorized
 tags:
@@ -17,14 +15,14 @@ tags:
   - message
 
 ---
-Here&#8217;s a basic example of how an anonymous function, or lambda function, can be used with go. We&#8217;re just printing a statement to screen, but it can be used for various things &#8211; one of which could be just to segment code which will only need to get run once and doesn&#8217;t need to be referenced.
+Here is a basic example of how an anonymous function, or lambda function, can be used with go. We're just printing a statement to screen, but it can be used for various things - one of which could be just to segment code which will only need to get run once and doesn't need to be referenced. 
+
+It also has the use case of encapulating the variables used within itself, so only from within are you able to access a variable from within. Once the function has finished the variables can then be garbage collected. To pass data into the function we pass it into the execution parenthesis at the end.
 
 ```go
 package main
 
-import (
-    "fmt"
-)
+import "fmt"
 
 func main() {
 
