@@ -2,8 +2,7 @@
 title: Print a Variable's Type (e.g. Int, String, Float)
 author: Edd Turtle
 type: post
-draft: true
-date: 2017-08-07T18:00:00+00:00
+date: 2017-08-07T21:00:00+00:00
 url: /print-variable-type
 categories:
   - Uncategorized
