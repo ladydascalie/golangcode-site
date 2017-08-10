@@ -8,20 +8,23 @@
                 <h1>
                     {{ .Title }}
                 </h1>
-                <h2 class="headline">
-                {{ .Date.Format "Jan 2, 2006" }}
-                &nbsp;&middot;&nbsp; {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
-                &nbsp;&middot;&nbsp; {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
-                  <span class="tags">
-                  {{ with .Params.tags }}
-                  {{ if ge (len .) 1 }}
-                      {{ range . }}
-                          <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a> &middot;
-                      {{ end }}
-                  {{ end }}
-                  {{ end}}
-                  </span>
-                </h2>
+
+                {{ if eq .Type "post" }}
+                    <h2 class="headline">
+                        {{ .Date.Format "Jan 2, 2006" }}
+                        &nbsp;&middot;&nbsp; {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
+                        &nbsp;&middot;&nbsp; {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
+                        <span class="tags">
+                            {{ with .Params.tags }}
+                                {{ if ge (len .) 1 }}
+                                    {{ range . }}
+                                        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a> &middot;
+                                    {{ end }}
+                                {{ end }}
+                            {{ end}}
+                        </span>
+                    </h2>
+                {{ end }}
             </header>
             {{ if .Site.Params.enableToc }}
               {{ if .TableOfContents }}
@@ -36,16 +39,20 @@
             </section>
         </article>
 
-        {{ if .Site.Params.enableGithubIssuesTips }}
-            {{ partial "github-issues-tip.html" . }}
-        {{ end }}
+        {{ if eq .Type "post" }}
+            <i class="fa fa-ellipsis-h page-separator" aria-hidden="true"></i>
 
-        {{ if .Site.Params.enableDisqus }}#post-na
-            {{ partial "disqus.html" . }}
-        {{ end }}
+            {{ if .Site.Params.enableGithubIssuesTips }}
+                {{ partial "github-issues-tip.html" . }}
+            {{ end }}
 
-        {{ if .Site.Params.enableDuoshuo }}
-            {{ partial "duoshuo.html" . }}
+            {{ if .Site.Params.enableDisqus }}
+                {{ partial "disqus.html" . }}
+            {{ end }}
+
+            {{ if .Site.Params.enableDuoshuo }}
+                {{ partial "duoshuo.html" . }}
+            {{ end }}
         {{ end }}
 
         {{ partial "footer.html" . }}

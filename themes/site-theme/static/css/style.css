@@ -199,7 +199,8 @@ div.pre-nav-header {
 div.pre-nav-header a {
     display: block;
     color: #777;
-    padding: 20px 10px 10px 20px;
+    padding: 10px;
+    margin: 10px 0 0 10px;
 }
 
 nav.main-nav {
@@ -752,7 +753,7 @@ h2.month {
 }
 
 #disqus_thread, #ds-thread {
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 #sharing a.facebook {
@@ -986,4 +987,12 @@ a.symbol:hover {
         width: 400px;
         margin: 0 auto;
     }
+}
+
+.page-separator {
+    display: block !important;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4.5em !important;
+    color: #DDD;
 }
