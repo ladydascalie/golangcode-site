@@ -3,6 +3,9 @@
         {{ partial "social.html" . }}
     {{ end }}
     <p class="small">
+      Code shown Licenced under <a href="https://github.com/eddturtle/golangcode-site/blob/master/LICENSE">MIT Licence</a>
+    </p>
+    <p class="small">
     {{ with .Site.Params.copyright }}
         {{ . | markdownify }}
     {{ else }}
