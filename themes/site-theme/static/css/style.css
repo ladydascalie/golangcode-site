@@ -426,6 +426,9 @@ h6 {
     margin-bottom: 6px;
 }
 
+p {
+    overflow-wrap: break-word;
+}
 p.small {
     color: #888;
     font-size: 14px;
@@ -780,6 +783,9 @@ h2.month {
 @media screen and (max-width: 540px) {
     #wrapper {
         padding: 20px 20px 20px 20px;
+    }
+    #wrapper.home {
+        padding: 0 20px 20px 20px;
     }
     #header {
         margin-bottom: 60px;
