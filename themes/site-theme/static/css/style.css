@@ -118,6 +118,7 @@ html, body {
 body {
     font: 16px/1 "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #666;
+    overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }

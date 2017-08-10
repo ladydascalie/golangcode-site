@@ -18,7 +18,7 @@
                             {{ with .Params.tags }}
                                 {{ if ge (len .) 1 }}
                                     {{ range . }}
-                                        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a> &middot;
+                                        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">#{{ . }}</a>
                                     {{ end }}
                                 {{ end }}
                             {{ end}}
@@ -41,6 +41,10 @@
 
         {{ if eq .Type "post" }}
             <i class="fa fa-ellipsis-h page-separator" aria-hidden="true"></i>
+
+            <p>See something which isn't right? You can contibute and update this page <a href="https://github.com/eddturtle/golangcode-site">on GitHub</a> or just let us know in the comments below. Thanks for reading.</p>
+
+            <!-- <i class="fa fa-ellipsis-h page-separator" aria-hidden="true"></i> -->
 
             {{ if .Site.Params.enableGithubIssuesTips }}
                 {{ partial "github-issues-tip.html" . }}
