@@ -20,20 +20,19 @@ package main
 
 import (
     "fmt"
-    "reflect"
 )
 
 func main() {
     // Will print 'int'
     anInt := 1234
-    fmt.Println(reflect.TypeOf(anInt).String())
+    fmt.Printf("%T\n", anInt)
 
     // Will print 'string'
     aString := "Hello World"
-    fmt.Println(reflect.TypeOf(aString).String())
+    fmt.Printf("%T\n", aString)
 
     // Will print 'float64'
     aFloat := 3.14
-    fmt.Println(reflect.TypeOf(aFloat).String())
+    fmt.Printf("%T\n", aFloat)
 }
 ```
