@@ -36,7 +36,7 @@ func main() {
 
     fmt.Println("HTTP Response Status: " + strconv.Itoa(resp.StatusCode))
 
-    if resp.StatusCode > 200 || resp.StatusCode <= 299 {
+    if resp.StatusCode >= 200 && resp.StatusCode <= 299 {
         fmt.Println("HTTP Status OK!")
     } else {
         fmt.Println("Argh! Broken")
