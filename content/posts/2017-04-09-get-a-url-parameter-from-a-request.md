@@ -4,8 +4,6 @@ author: Edd Turtle
 type: post
 date: 2017-04-09T10:55:07+00:00
 url: /get-a-url-parameter-from-a-request/
-rop_post_url_twitter:
-  - 'https://golangcode.com/get-a-url-parameter-from-a-request/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost'
 categories:
   - Uncategorized
 tags:
@@ -22,7 +20,9 @@ tags:
   - url
 
 ---
-Often it&#8217;s important to read off the parameters sent through from the request. If it&#8217;s a GET request these will lie within the url itself and can be read using the request URL property. It&#8217;s important to note that when getting the parameters in this way it will always return an array (or slice?).
+Often it's important to read off the parameters sent through from the request. If it's a GET request these will lie within the url itself and can be read using the request's URL property. It's important to note that when getting the parameters in this way it will always return an array (or slice?).
+
+Our example below will act a little like an echo server, we listen for any requests and log the result of `key` if it's present.
 
 ```go
 package main
@@ -41,7 +41,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
     keys, ok := r.URL.Query()["key"]
     
-    if !ok || len(keys) &lt; 1 {
+    if !ok || len(keys) < 1 {
         log.Println("Url Param 'key' is missing")
         return
     }

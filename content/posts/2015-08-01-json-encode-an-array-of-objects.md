@@ -18,7 +18,7 @@ tags:
   - stdout
 
 ---
-This is how to convert any object within go, into the JSON data structure. In our example we&#8217;re using an array of Page objects, each with their own properties and encoding them. We&#8217;re then just printing this string to Stdout, but if we&#8217;re using the net/http to create an api, we would want to write to the http writer instead.
+This is how to convert any object within go, into the JSON data structure. In our example we're using an array of Page objects, each with their own properties and encoding them. We're then just printing this string to Stdout, but if we were using the `net/http` to create an api, we would want to write to the http writer instead.
 
 ```go
 package main
