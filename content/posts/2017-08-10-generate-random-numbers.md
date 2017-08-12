@@ -15,7 +15,7 @@ tags:
   - between
 ---
 
-Random numbers in computing can be useful for many reasons (we won't go into them too much here though). With Go, they're simple enough to generate providing you first set as unique as possible seed first.
+Random numbers in computing can be useful for many reasons (we won't go into them too much here though). With Go, they're simple enough to generate providing you first set a unique as possible seed first. Without setting a seed first, the random number generating will return the same number the first time you run it.
 
 In our example, we want to generate a random number somewhere between two other numbers - we use `Intn` to help with this.
 
