@@ -13,10 +13,11 @@ tags:
   - bytes
   - closer
   - get
-  - http
   - io
   - read
   - string
+  - readcloser
+  - convert
 
 ---
 Net/http is an amazing package but there are times you need to work with the response of call you have just made. Many functions require a string as input so we have to convert it first by passing it through a buffer.
@@ -31,7 +32,7 @@ import (
 )
 
 func main() {
-	response, _ := http.Get("http://www.google.com/")
+	response, _ := http.Get("https://golangcode.com/")
 
 	// This would fail because Body = io.ReadCloser
 	// fmt.Printf(response.Body)
@@ -44,4 +45,4 @@ func main() {
 
 	fmt.Printf(newStr)
 }
-```go
+```
