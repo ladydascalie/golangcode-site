@@ -1,7 +1,7 @@
 # Golang Code Site
 The website code to golangcode.com
 
-Contributions and fixes welcome.
+Contributions and fixes will be appreciated via pull request.
 
 ### To Work On
 
